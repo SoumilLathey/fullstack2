@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banking Interface</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .balance-card {
+      background-color: #e0f7fa;
+      color: #006064;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      flex: 1 1 40%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .deposit-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .withdraw-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .deposit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .withdraw-btn:hover {
+      background-color: #e53935;
+    }
+
+    @media (max-width: 500px) {
+      .buttons {
+        flex-direction: column;
+      }
+      .buttons button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="balance-card">
+      Balance: ₹<span id="balance">10,000</span>
+    </div>
+    <div class="buttons">
+      <button class="deposit-btn">Deposit</button>
+      <button class="withdraw-btn">Withdraw</button>
+    </div>
+  </div>
+</body>
+</html>
